@@ -1,0 +1,21 @@
+from flask import Flask 
+from flask import render_template
+from flask import request
+import os
+app = Flask(__name__)
+
+@app.route('/', methods=['POST', 'GET'])
+def IndexPage():
+	if request.method == "POST":
+		code = request.form['code']
+		if code:
+			file = open('ino-prj/src/sketch.ino', 'w+')
+			file.write(code)
+			file.close()
+			os.system("""
+				cd ino-prj && ino build && ino upload""")
+			return render_template('index.html', info="sukses")
+	return render_template('index.html')
+
+if __name__ == '__main__':
+	app.run(port=8080)

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Platform Akuisisi Data Sensor</title>
+  <link href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"></link>
+  <link href="{{ url_for('static',filename='dashboard.css') }}" type="text/css" rel="stylesheet"></link>
+  <!--link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'-->
+</head>
+S
+<body>
+  <header>
+  <!--Search bar-->
+  	<div class="container data">
+  		<form class="navbar-form" method="post">
+			   <textarea name="code" style="width: 500px; height: 500px;" multiline="true">
+             
+         </textarea>
+       <button type="submit" name="btn" class="btn btn-info">Upload</button>  
+       <h3>{{info}}</h3>
+		</form>	
+
+  	</div>
+	</div>
+</header>
+
+<script src="{{ url_for('static',filename='jquery.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+
+</body>
+
+</html>
